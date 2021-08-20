@@ -26,9 +26,7 @@ void TimeSync::initTimeFromRTC()
   setenv("TZ", "EST5EDT", 1);
 
   struct tm timeinfo;
-  getLocalTime(&timeinfo);
 
-  Serial.println(&timeinfo, "Set current time to: %A, %B %d %Y %H:%M:%S");
 }
 
 void TimeSync::stopNTPSync()
